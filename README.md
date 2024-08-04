@@ -1,1 +1,75 @@
-# Ve3_global
+# **Data Analysis and Visualization Django App**
+
+## **Overview**
+This Django application is designed to handle, preprocess, and analyze data files uploaded by users. It provides various functionalities, including:
+
+**Data Preprocessing**: Handles missing values, removes duplicates, scales numerical features,encodes categorical variables and identifies and handles outliers in numerical columns.
+**Visualization**: Generates scatter plots, line plots, pie charts, and histograms from the data. It supports both the raw and preprocessed datasets.
+
+## Features
+### Summary of data
+It shows summary of data such as the first few rows of the .csv file, describe the data, display mean median and mode for the features , the missing values in the .csv file , the number of duplicate data that is dealt and outliers in each feature(column).
+### **File Upload** 
+Users can upload CSV files for analysis.
+### Data Cleaning
+Automatically handles missing values and outliers.
+### Visualization
+Generates multiple types of plots for data analysis.It shows line plot, scatter plot, piecharts and also histograms
+### Scalability
+Supports scaling of numerical features.
+### Categorical Data Handling 
+Encodes categorical variables into dummy variables.
+
+## File Structure
+#### analysis/views.py: Handles the file upload, data processing, and visualization.
+#### analysis/urls.py: URL routing for the app.
+#### templates/: HTML templates for the index and results pages.
+#### media/: Directory where uploaded and processed files are stored.
+#### analysis is the name of the app created in the project analysis_pro
+
+## Setup
+### 1. Prerequisites
+#### Ensure you have the following installed:
+##### 1. Python 3.x
+##### 2.Django
+##### 3.Pandas
+##### 4.Matplotlib
+##### 5.Seaborn
+##### 6.Scikit-learn
+##### 7.SciPy
+
+### 2. Installation
+##### Clone the Repository
+
+### 3. Create a Virtual Environment
+#### python -m venv venv
+#### source venv/bin/activate  
+#### On Windows use `venv\Scripts\activate`
+
+### 4. Create a Django project and app if not already done
+##### django-admin startproject analysis_pro
+##### cd analysis_pro
+##### django-admin startapp analysis
+
+### 5.Add the app to your project's settings in myproject/settings.py:
+
+### 6. In analysis_pro/settings.py, add: 
+##### MEDIA_URL = '/media/'
+##### MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+### 7. Update analysis_pro/urls.py to include media URLs:
+##### urlpatterns = [...] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+### 8. Apply migrations
+##### python manage.py migrate
+
+### 9. Run Development Environment
+##### python manage.py runserver
+
+
+
+
+
+
+
+
