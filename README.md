@@ -3,8 +3,9 @@
 ## **Overview**
 This Django application is designed to handle, preprocess, and analyze data files uploaded by users. It provides various functionalities, including:
 
-**Data Preprocessing**: Handles missing values, removes duplicates, scales numerical features,encodes categorical variables and identifies and handles outliers in numerical columns.
-**Visualization**: Generates scatter plots, line plots, pie charts, and histograms from the data. It supports both the raw and preprocessed datasets.
+### **Data Preprocessing**: Handles missing values, removes duplicates, scales numerical features,encodes categorical variables and identifies and handles outliers in numerical columns.
+### **Visualization**: Generates scatter plots, line plots, pie charts, and histograms from the data. It supports both the raw and preprocessed datasets.**It creates visualization that shows every feature plotted against every other feature.**
+### Added a feature which stores the csv file temporarily and allows us to delete it from directory.
 
 ## Features
 ### Summary of data
@@ -46,24 +47,26 @@ Encodes categorical variables into dummy variables.
 #### source venv/bin/activate  
 #### On Windows use `venv\Scripts\activate`
 
-### 4. Create a Django project and app if not already done
+### 4.Install packages in requirements.txt
+
+### 5. Create a Django project and app if not already done
 ##### django-admin startproject analysis_pro
 ##### cd analysis_pro
 ##### django-admin startapp analysis
 
-### 5.Add the app to your project's settings in myproject/settings.py:
+### 6.Add the app to your project's settings in myproject/settings.py:
 
-### 6. In analysis_pro/settings.py, add: 
+### 7. In analysis_pro/settings.py, add: 
 ##### MEDIA_URL = '/media/'
 ##### MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-### 7. Update analysis_pro/urls.py to include media URLs:
+### 8. Update analysis_pro/urls.py to include media URLs:
 ##### urlpatterns = [...] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-### 8. Apply migrations
+### 9. Apply migrations
 ##### python manage.py migrate
 
-### 9. Run Development Environment
+### 10. Run Development Environment
 ##### python manage.py runserver
 
 
