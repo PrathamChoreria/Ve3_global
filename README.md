@@ -7,7 +7,7 @@ This Django application is designed to handle, preprocess, and analyze data file
 Handles missing values, removes duplicates, scales numerical features,encodes categorical variables and identifies and handles outliers in numerical columns.
 #### Visualization:
 Generates scatter plots, line plots, pie charts, and histograms from the data. It supports both the raw and preprocessed datasets.**It creates visualization that shows every feature plotted against every other feature.**
-### Added a feature which stores the csv file temporarily and allows us to delete it from directory.
+#### Added a feature which stores the csv file temporarily and allows us to delete it from directory.
 
 #### Pls find project snapshots in photos folder
 
