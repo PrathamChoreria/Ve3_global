@@ -1,0 +1,60 @@
+Date,Product_Category,Product_Subcategory,Units_Sold,Revenue,Cost,Region
+2023-01-01,Electronics,Smartphones,100.0,37500.0,30000.0,North
+2023-01-01,Electronics,Laptops,50.0,56250.0,45000.0,North
+2023-01-01,Home Appliances,Refrigerators,20.0,22500.0,18750.0,South
+2023-01-01,Home Appliances,Washing Machines,15.0,40000.0,13500.0,South
+2023-01-01,Furniture,Chairs,200.0,10000.0,6000.0,East
+2023-01-02,Electronics,Laptops,0.0,67500.0,54000.0,West
+2023-01-02,Home Appliances,Refrigerators,25.0,28125.0,23437.5,North
+2023-01-02,Furniture,Tables,0.0,18000.0,14400.0,South
+2023-01-02,Furniture,Chairs,220.0,8250.0,6600.0,South
+2023-01-03,Electronics,Smartphones,130.0,48750.0,39000.0,East
+2023-01-03,Electronics,Laptops,70.0,78750.0,63000.0,East
+2023-01-03,Home Appliances,Washing Machines,0.0,22500.0,18000.0,West
+2023-01-03,Furniture,Chairs,0.0,8625.0,6900.0,North
+2023-01-04,Electronics,Smartphones,140.0,52500.0,42000.0,South
+2023-01-04,Home Appliances,Washing Machines,22.0,24750.0,19800.0,East
+2023-01-04,Furniture,Chairs,240.0,9000.0,7200.0,West
+2023-01-05,Electronics,Smartphones,110.0,41250.0,33000.0,North
+2023-01-05,Electronics,Laptops,55.0,61875.0,49500.0,North
+2023-01-05,Home Appliances,Washing Machines,0.0,18750.0,14250.0,South
+2023-01-05,Furniture,Chairs,210.0,7875.0,6300.0,East
+2023-01-06,Electronics,Smartphones,125.0,46875.0,37500.0,West
+2023-01-06,Electronics,Laptops,65.0,73125.0,58500.0,West
+2023-01-06,Home Appliances,Refrigerators,28.0,31500.0,25500.0,North
+2023-01-06,Home Appliances,Washing Machines,20.0,21750.0,10000.0,North
+2023-01-06,Furniture,Chairs,230.0,8625.0,6900.0,South
+2023-01-06,Furniture,Tables,0.0,18375.0,15000.0,South
+2023-01-07,Electronics,Smartphones,140.0,52500.0,42000.0,East
+2023-01-07,Electronics,Laptops,0.0,82500.0,66000.0,East
+2023-01-07,Home Appliances,Refrigerators,32.0,36000.0,28875.0,West
+2023-01-07,Home Appliances,Washing Machines,25.0,24000.0,19500.0,West
+2023-01-07,Furniture,Tables,175.0,19500.0,15375.0,North
+2023-01-08,Electronics,Smartphones,150.0,56250.0,45000.0,South
+2023-01-08,Electronics,Laptops,90.0,101250.0,81000.0,South
+2023-01-08,Home Appliances,Washing Machines,25.0,25500.0,20250.0,East
+2023-01-08,Furniture,Chairs,0.0,9000.0,7200.0,West
+2023-01-08,Furniture,Tables,190.0,15750.0,16500.0,West
+2023-01-09,Electronics,Smartphones,160.0,60000.0,48000.0,North
+2023-01-09,Electronics,Laptops,95.0,106875.0,85500.0,North
+2023-01-09,Home Appliances,Refrigerators,38.0,42750.0,33750.0,South
+2023-01-09,Furniture,Chairs,260.0,9750.0,1000.0,East
+2023-01-09,Furniture,Tables,30.0,20625.0,16500.0,East
+2023-01-10,Electronics,Smartphones,23.0,63750.0,51000.0,West
+2023-01-10,Electronics,Laptops,100.0,112500.0,50000.0,West
+2023-01-10,Home Appliances,Refrigerators,42.0,45750.0,35250.0,North
+2023-01-10,Home Appliances,Washing Machines,28.0,26250.0,21000.0,North
+2023-01-10,Furniture,Chairs,270.0,10125.0,8100.0,South
+2023-01-10,Furniture,Tables,200.0,21750.0,10000.0,South
+2023-01-11,Electronics,Smartphones,170.0,63750.0,51000.0,East
+2023-01-11,Electronics,Laptops,2.0,116250.0,93000.0,East
+2023-01-11,Home Appliances,Refrigerators,45.0,46500.0,20000.0,West
+2023-01-11,Home Appliances,Washing Machines,2.0,27000.0,21750.0,West
+2023-01-11,Furniture,Chairs,280.0,10500.0,8400.0,North
+2023-01-11,Furniture,Tables,210.0,22500.0,16875.0,North
+2023-01-12,Electronics,Smartphones,180.0,67500.0,54000.0,South
+2023-01-12,Electronics,Laptops,110.0,123750.0,99000.0,South
+2023-01-12,Home Appliances,Refrigerators,48.0,47250.0,35550.0,East
+2023-01-12,Home Appliances,Washing Machines,32.0,27000.0,21750.0,East
+2023-01-12,Furniture,Chairs,290.0,10875.0,8550.0,West
+2023-01-12,Furniture,Tables,220.0,23250.0,18375.0,West
