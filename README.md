@@ -45,9 +45,9 @@ Encodes categorical variables into dummy variables.
 ##### Clone the Repository
 
 ### 3. Create a Virtual Environment
-#### python -m venv venv
-#### source venv/bin/activate  
-#### On Windows use `venv\Scripts\activate`
+##### python -m venv venv
+##### source venv/bin/activate  
+##### On Windows use `venv\Scripts\activate`
 
 ### 4.Install packages in requirements.txt
 
