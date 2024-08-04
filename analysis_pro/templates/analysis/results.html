@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analysis Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/results.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Analysis Results</h1>
+
+        <h2>Data Head</h2>
+        <div class="table-container">
+            <div class='table-responsive table-bordered table-hover'>{{ head|safe }}</div>
+        </div>
+
+        <h2>Summary Statistics</h2>
+        <div class="table-container">
+            <div class='table-responsive table-bordered table-hover'>{{ describe|safe }}</div>
+        </div>
+
+        <h2>Missing Values Dealt With</h2>
+        <div class="table-container">
+            <div class='table-responsive table-bordered table-hover'>{{ missing_values|safe }}</div>
+        </div>
+
+        <h3>Duplicate Values Dealt With: {{ duplicated_values }}</h3>
+
+        <h2>Outliers</h2>
+        <div class="table-container">
+            <div class='table-responsive table-bordered table-hover'>{{outlier_counts|safe }}</div>
+        </div>
+
+        <h2>Mean Values</h2>
+        <div class="table-container">
+            <div class='table-responsive table-bordered table-hover'>{{ mean_values|safe }}</div>
+        </div>
+    
+        <h2>Median Values</h2>
+        <div class="table-container">
+            <div class='table-responsive table-bordered table-hover'>{{ median_values|safe }}</div>
+        </div>
+    
+        <h2>Mode Values</h2>
+        <div class="table-container">
+            <div class='table-responsive table-bordered table-hover'>{{ mode_values|safe }}</div>
+        </div>
+
+        <h2>Visualizations - Line and Scatter</h2>
+        <label for="myDropdown" class="form-label">Choose an option:</label>
+        <select id="myDropdown" class="form-select" data-image-id="selectedImage" data-path="/media/others/">
+            {% for plot, name in plot_choices %}
+            <option value="{{ plot }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <div id="imageDisplay" class='image-display'>
+            <img id="selectedImage" src="" alt="Selected Image">
+        </div>
+
+        <h2>Visualizations - Pie Charts</h2>
+        <label for="myDropdown1" class="form-label">Choose an option:</label>
+        <select id="myDropdown1" class="form-select" data-image-id="selectedImage1" data-path="/media/pie/">
+            {% for plot, name in pie_choices %}
+            <option value="{{ plot }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <div id="imageDisplay1" class='image-display'>
+            <img id="selectedImage1" src="" alt="Selected Image">
+        </div>
+
+        <h2>Visualizations - Histograms</h2>
+        <label for="myDropdown2" class="form-label">Choose an option:</label>
+        <select id="myDropdown2" class="form-select" data-image-id="selectedImage2" data-path="/media/histograms/">
+            {% for plot, name in hist_choices %}
+            <option value="{{ plot }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <div id="imageDisplay2" class='image-display'>
+            <img id="selectedImage2" src="" alt="Selected Image">
+        </div>
+
+        <h2>Visualizations - Scaled Data</h2>
+        <label for="myDropdown3" class="form-label">Choose an option:</label>
+        <select id="myDropdown3" class="form-select" data-image-id="selectedImage3" data-path="/media/scaled/">
+            {% for plot, name in scaled_choices %}
+            <option value="{{ plot }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <div id="imageDisplay3" class='image-display'>
+            <img id="selectedImage3" src="" alt="Selected Image">
+        </div>
+
+        <h2>Delete Files</h2>
+        <form method="POST" action="{% url 'delete_file' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="fileToDelete">File to Delete:</label>
+                <input type="text" id="fileToDelete" name="file_name" class="form-control" placeholder="Enter file name">
+            </div>
+            <button type="submit" class="btn btn-danger">Delete File</button>
+        </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function setupDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            const imageId = dropdown.getAttribute('data-image-id');
+            const imagePathPrefix = dropdown.getAttribute('data-path');
+            const selectedImage = document.getElementById(imageId);
+
+            dropdown.addEventListener('change', function() {
+                const imagePath = this.value;
+                if (imagePath) {
+                    selectedImage.src = `${imagePathPrefix}${imagePath}`;
+                    selectedImage.alt = `Selected Image: ${imagePath}`;
+                } else {
+                    selectedImage.src = '';
+                    selectedImage.alt = 'Selected Image';
+                }
+            });
+        }
+
+        setupDropdown('myDropdown');
+        setupDropdown('myDropdown1');
+        setupDropdown('myDropdown2');
+        setupDropdown('myDropdown3');
+    </script>
+</body>
+</html>
