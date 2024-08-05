@@ -9,7 +9,7 @@ Handles missing values, removes duplicates, scales numerical features,encodes ca
 Generates scatter plots, line plots, pie charts and histograms from the data. It supports both the raw and preprocessed datasets.**It creates visualization that shows every feature plotted against every other feature.**
 #### Added a feature which stores the csv file temporarily and allows us to delete it from directory.
 
-#### csv file is present in repository sales_data copy.csv
+#### Csv file is present in repository sales_data copy.csv
 
 #### Pls find project snapshots in photos folder
 
