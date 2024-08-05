@@ -1,12 +1,12 @@
 # **Data Analysis and Visualization Django App**
 
 ## **Overview**
-This Django application is designed to handle, preprocess, and analyze data files uploaded by users. It provides various functionalities, including:
+This Django application is designed to handle, preprocess and analyze data files uploaded by users. It provides various functionalities including:
 
 #### Data Preprocessing: 
-Handles missing values, removes duplicates, scales numerical features,encodes categorical variables and identifies and handles outliers in numerical columns.Designed for flexibility, the application can process a wide range of CSV files, making it an invaluable tool for data preprocessing across different datasets and use cases.
+Handles missing values, removes duplicates, scales numerical features,encodes categorical variables and identifies and handles outliers in numerical columns.Designed for flexibility, the application can process a wide range of CSV files making it an invaluable tool for data preprocessing across different datasets and use cases.
 #### Visualization:
-Generates scatter plots, line plots, pie charts, and histograms from the data. It supports both the raw and preprocessed datasets.**It creates visualization that shows every feature plotted against every other feature.**
+Generates scatter plots, line plots, pie charts and histograms from the data. It supports both the raw and preprocessed datasets.**It creates visualization that shows every feature plotted against every other feature.**
 #### Added a feature which stores the csv file temporarily and allows us to delete it from directory.
 
 #### Pls find project snapshots in photos folder
@@ -19,7 +19,7 @@ Users can upload CSV files for analysis.File is temporarily stored in media fold
 ### Data Cleaning
 Automatically handles missing values and outliers.**Outliers are removed only if we want to remove them.Outliers can be handy in a few data preprocessing processes and anamoly detection so I give user the choice to remove them.**
 ### Visualization
-Generates multiple types of plots for data analysis.It shows line plot, scatter plot, piecharts and also histograms
+Generates multiple types of plots for data analysis.It shows line plot, scatter plot, piecharts and also histograms.
 ### Scalability
 Supports scaling of numerical features.
 ### Categorical Data Handling 
@@ -41,7 +41,7 @@ Encodes categorical variables so that they can be used in ML models if needed.
 ##### 3.Pandas
 ##### 4.Matplotlib
 ##### 5.Seaborn
-##### 6.Scikit-learn
+##### 6.Scikit-learn/sklearn
 ##### 7.SciPy
 
 ### 2. Installation
