@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import pandas as pd
+from django.shortcuts import redirect
 import os
 from django.conf import settings
 import matplotlib.pyplot as plt
@@ -42,6 +43,31 @@ def handle_uploaded_file(f):
 
 def index(request):
     return render(request, 'index.html')
+
+
+def results(request):
+    return render(request, "results.html")
+
+
+def remove_outliers(request):
+    if request.method == 'POST':
+        print(request.POST['file_name'])
+        preprocessed_file = os.path.join(settings.MEDIA_ROOT, 'preprocessed1', request.POST['file_name'])
+        df=pd.read_csv(preprocessed_file)
+        numerical_cols = df.select_dtypes(include=['number','int64', 'float64']).columns
+        df = handle_outliers(df, numerical_cols)
+        
+        preprocessed_file_path = os.path.join(settings.MEDIA_ROOT, 'preprocessed1', request.POST['file_name'])
+        df.to_csv(preprocessed_file_path, index=False)
+
+        scaler = MinMaxScaler()
+        df[numerical_cols] = scaler.fit_transform(df[numerical_cols])
+
+        preprocessed_file_path1 = os.path.join(settings.MEDIA_ROOT, 'preprocessed', request.POST['file_name'])
+        
+        if df.to_csv(preprocessed_file_path1, index=False):
+            return redirect(reverse('index'))
+    return redirect(reverse('index'))
 
 
 
@@ -90,7 +116,7 @@ def data_preprocessing(file_path, f):
     # Encoding categorical variables if it is to be used for machine learning models
     df = pd.get_dummies(df)
 
-    df = handle_outliers(df, numerical_cols)
+    #df = handle_outliers(df, numerical_cols)
     
     # Save the preprocessed file
     preprocessed_file_path = os.path.join(settings.MEDIA_ROOT, 'preprocessed', f.name)

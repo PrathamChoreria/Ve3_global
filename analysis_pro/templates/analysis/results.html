@@ -95,6 +95,16 @@
             <img id="selectedImage3" src="" alt="Selected Image">
         </div>
 
+        <h2>Remove Outliers</h2>
+        <form method="POST" action="{% url 'remove_outliers' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="fileToOutliers">File:</label>
+                <input type="text" id="fileToOutliers" name="file_name" class="form-control" placeholder="Enter file name">
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+
         <h2>Delete Files</h2>
         <form method="POST" action="{% url 'delete_file' %}">
             {% csrf_token %}
