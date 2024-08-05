@@ -22,7 +22,7 @@ Users can upload CSV files for analysis.File is temporarily stored in media fold
 Automatically handles missing values and outliers.**Outliers are removed only if we want to remove them.Outliers can be handy in a few data preprocessing processes and anamoly detection so I give user the choice to remove them.**
 ### Visualization
 Generates multiple types of plots for data analysis.It shows line plot, scatter plot, piecharts and also histograms.
-### Scalability
+### Scaling
 Supports scaling of numerical features.
 ### Categorical Data Handling 
 Encodes categorical variables so that they can be used in ML models if needed.
