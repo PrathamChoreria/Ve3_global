@@ -23,7 +23,7 @@ Generates multiple types of plots for data analysis.It shows line plot, scatter 
 ### Scalability
 Supports scaling of numerical features.
 ### Categorical Data Handling 
-Encodes categorical variables into dummy variables.
+Encodes categorical variables so that they can be used in ML models if needed.
 
 ## File Structure
 #### analysis/views.py: Handles the file upload, data processing, and visualization.
