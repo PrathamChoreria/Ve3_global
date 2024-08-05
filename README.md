@@ -34,6 +34,10 @@ Encodes categorical variables so that they can be used in ML models if needed.
 #### media/: Directory where uploaded and processed files are stored.**It also stores graph/plot/piecharts/histograms that are generated.It also stores preprocessed csv file along with preprocessed scaled csv file in it.**
 #### analysis is the name of the app created in the project analysis_pro
 
+#### Below is snapshot of file structure
+![image](https://github.com/user-attachments/assets/edcdda80-51c2-4797-8a84-0f15cf6ecd43)
+
+
 
 ## Setup
 ### 1. Prerequisites
