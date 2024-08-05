@@ -15,9 +15,9 @@ Generates scatter plots, line plots, pie charts, and histograms from the data. I
 ### Summary of data
 It shows summary of data such as the first few rows of the .csv file, describe the data, display mean median and mode for the features , the missing values in the .csv file , the number of duplicate data that is dealt and outliers in each feature(column).
 ### **File Upload** 
-Users can upload CSV files for analysis.
+Users can upload CSV files for analysis.File is temporarily stored in media folder
 ### Data Cleaning
-Automatically handles missing values and outliers.
+Automatically handles missing values and outliers.**Outliers are removed only if we want to remove them.Outliers can be handy in a few data preprocessing and anamoly detection so I give user the choice to remove them.**
 ### Visualization
 Generates multiple types of plots for data analysis.It shows line plot, scatter plot, piecharts and also histograms
 ### Scalability
@@ -29,8 +29,9 @@ Encodes categorical variables into dummy variables.
 #### analysis/views.py: Handles the file upload, data processing, and visualization.
 #### analysis/urls.py: URL routing for the app.
 #### templates/: HTML templates for the index and results pages.
-#### media/: Directory where uploaded and processed files are stored.
+#### media/: Directory where uploaded and processed files are stored.**It also stores graph/plot/piecharts/histograms that are generated.It also stores preprocessed csv file along with preprocessed scaled csv file in it.**
 #### analysis is the name of the app created in the project analysis_pro
+
 
 ## Setup
 ### 1. Prerequisites
