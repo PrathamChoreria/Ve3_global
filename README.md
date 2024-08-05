@@ -28,10 +28,11 @@ Supports scaling of numerical features.
 Encodes categorical variables so that they can be used in ML models if needed.
 
 ## File Structure
-#### analysis/views.py: Handles the file upload, data processing, and visualization.
-#### analysis/urls.py: URL routing for the app.
-#### templates/: HTML templates for the index and results pages.
-#### media/: Directory where uploaded and processed files are stored.**It also stores graph/plot/piecharts/histograms that are generated.It also stores preprocessed csv file along with preprocessed scaled csv file in it.**
+#### analysis_pro/analysis/views.py: Handles the file upload, data processing, and visualization.
+#### analysis_pro/analysis/urls.py: URL routing for the app.
+#### analysis_pro/templates/: HTML templates for the index and results pages.
+#### analysis_pro/media/: Directory where uploaded and processed files are stored.**It also stores graph/plot/piecharts/histograms that are generated.It also stores preprocessed csv file along with preprocessed scaled csv file in it.**
+#### analysis_pro/static/ : Has static files such as css files
 #### analysis is the name of the app created in the project analysis_pro
 
 #### Below is snapshot of file structure
