@@ -17,7 +17,7 @@ It shows summary of data such as the first few rows of the .csv file, describe t
 ### **File Upload** 
 Users can upload CSV files for analysis.File is temporarily stored in media folder
 ### Data Cleaning
-Automatically handles missing values and outliers.**Outliers are removed only if we want to remove them.Outliers can be handy in a few data preprocessing and anamoly detection so I give user the choice to remove them.**
+Automatically handles missing values and outliers.**Outliers are removed only if we want to remove them.Outliers can be handy in a few data preprocessing processes and anamoly detection so I give user the choice to remove them.**
 ### Visualization
 Generates multiple types of plots for data analysis.It shows line plot, scatter plot, piecharts and also histograms
 ### Scalability
