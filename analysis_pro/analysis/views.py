@@ -236,21 +236,23 @@ def create_line_plots(df, numerical_columns,name):
     plot_paths = []
     plot_choices = []
     
-    if 'Date' in df.columns:
+    datetime_columns = df.select_dtypes(include=['datetime']).columns
+    #print("datetime ",datetime_columns.size,datetime_columns)
+
+    if datetime_columns.size > 0 or 'Date' in df.columns or 'DATE' in df.columns:
         for col in numerical_columns:
             plt.figure(figsize=(10, 6))
             df.groupby('Date')[col].sum().plot(kind='line')
             plt.title(f'{col} Over Time')
             plt.ylabel(f'{col}')
             plot_name = f'line_{col}_over_time.png'
-            plot_path = os.path.join(settings.MEDIA_ROOT,name, plot_name)
+            plot_path = os.path.join(settings.MEDIA_ROOT, name, plot_name)
             plt.savefig(plot_path)
             plot_paths.append(plot_path)
             plot_choices.append((plot_name, f'{col} Over Time'))
             plt.close()
-    
-    return plot_paths, plot_choices
 
+    return plot_paths, plot_choices
 
 
 
@@ -281,7 +283,7 @@ def create_histograms(df, numerical_columns,name):
     num_bins_sqrt = int(np.sqrt(len(df)))
     
     for col in numerical_columns:
-        print(col)
+        #print(col)
         plt.figure(figsize=(10, 6))
         df[col].plot(kind='hist', bins=num_bins_sqrt)
         plt.title(f'Histogram of {col}')
